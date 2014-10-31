@@ -1,0 +1,12 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+nombre=Nombre
+cicloAnual=¿Se trata de un cultivo de ciclo anual?
+clasificacion=Seleccione la clasificación a la que pertenece el cultivo
+costosPeriodo0=Costos de implementación para el Año 0
+costosPeriodo1=Costos de implementación para el Año 1
+costosPeriodo2=Costos de implementación para el Año 2
+cultivosAfectados=Seleccione los tipos de cultivo para los cuales la medida aplica
+name=Nombre
+descripcion=Descripción

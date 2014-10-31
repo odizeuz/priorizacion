@@ -1,0 +1,108 @@
+#{extends 'main.html' /}
+#{set title:'Resultado Final' /}
+<div class="contenedor_priorizacion">
+	<div class="priorizacion">		
+		<div class="dark-blue-block">
+			<h2>Priorización Total para: ${prod.nombre}</h2>
+		</div>	
+
+		<div class="medidas">
+			
+			<div class="medida">
+				<div class="titulomedida">
+					<img width="120px" height="120px" src="@{'/public/images/Gold.jpg'}" alt="Categoría Oro" />
+				</div>
+				#{list porPuntajeTotal }
+				#{ if _.calificacionfinal>=70}
+				
+				<div class="puntaje">
+					
+					<p>${_.medidaimplementada.nombre}</p>						
+					
+					<p>Puntaje: ${_.calificacionfinal}</p>
+				</div>
+				</br>
+				#{/if}
+				#{/list}	
+			</div>
+			
+			<div class="medida">
+				<div class="titulomedida">
+					<img width="120px" height="120px" src="@{'/public/images/Silver.jpg'}" alt="Categoría Plata" />
+				</div>
+				#{list porPuntajeTotal }
+				#{ if ((_.calificacionfinal>=50)&&(_.calificacionfinal<70))}
+				
+				<div class="puntaje">
+					
+					<p>${_.medidaimplementada.nombre}</p>						
+					
+					<p>Puntaje: ${_.calificacionfinal}</p>
+				</div>
+				</br>
+				#{/if}
+				#{/list}	
+			</div>
+			
+			<div class="medida">
+				<div class="titulomedida">
+					<img width="120px" height="120px" src="@{'/public/images/Bronze.jpg'}" alt="Categoría Bronze" />
+				</div>
+				#{list porPuntajeTotal }
+				
+				#{ if _.calificacionfinal<30}
+				
+				<div class="puntaje">
+					
+					<p>${_.medidaimplementada.nombre}</p>						
+					
+					<p>Puntaje: ${_.calificacionfinal}</p>
+				</div>
+				</br>
+				#{/if}
+				#{/list}	
+			</div>
+					
+		</div>
+	</div>
+	#{if true}		
+		<div class="priorizacion">
+			
+			<div class="medidas">
+				
+				<div class="medida">
+					
+					#{if valorCA>50}
+						<div class="puntaje" style="background-color:#00B050;color:white;">
+							<p>Alta Capacidad Adaptativa  (${valorCA})</p>b
+						</div>
+					#{/if}
+					#{else}
+						#{if valorCA<=50}
+							#{if valorCA<20}
+								<div class="puntaje" style="background-color:#C0504D;color:white;">
+									<p>Baja Capacidad Adaptativa  (${valorCA})</p>
+								</div>
+							#{/if}
+							#{else}
+								<div class="puntaje" style="background-color:#FFC000;color:white;">
+									<p>Capacidad Adaptativa Media (${valorCA})</p>
+								</div>
+							#{/else}
+						#{/if}
+					#{/else}
+				</div>
+							
+			</div>
+		</div>
+	#{/if}
+
+
+	<div class="priorizacion" style="text-align:right;margin-right:60px">
+		<button id="boton" class="w-button" onclick="window.location.replace('/encuesta/priorizacion?idEncuesta=${idEncuesta}')">
+		Atrás</button>
+		<button id="boton" class="w-button" onclick="window.location.replace('/encuesta/index?idEncuesta=-1')">
+		Nueva Priorización</button>
+	</div>
+		
+</div>

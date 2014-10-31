@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Sun Oct 05 2014 23:02:35 GMT+0000 (UTC) -->
+<html>
+<head>
+  <title>Priorizaci&oacute;n PEbA / #{get 'title' /}</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="${_response_encoding}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/normalize.css'}">
+  <link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/webflow.css'}">
+  <link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/peba.webflow.css'}">
+  <script src="@{'/public/javascripts/webfont.js'}"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Droid Sans:400,700"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="@{'/public/javascripts/modernizr.js'}"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="@{'/public/images/logo_pnuma_ico.ico'}">
+</head>
+<body style=" background-image: url('@{'/public/images/pattern_potatoes.jpg'}');background-size: 80px;">
+  <div>
+    <div class="w-container">
+      <div>
+        <div class="w-nav" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
+          <div class="w-container barra_navegacion">
+            <a class="w-nav-brand" style="padding:4px;" href="#"><img style="height:50px;opacity:0.8;" src="@{'/public/images/logo_peba.png'}" alt="Logo Herramienta PEbA" ></a>
+            <nav class="w-nav-menu" role="navigation"><a class="w-nav-link item_navegacion" href="@{Application.index()}">Inicio</a>
+
+            <a class="w-nav-link item_navegacion" href="@{Encuesta.index()}">Datos de Entrada</a>
+
+            #{if session.contains("encuesta") }
+            
+            <a class="w-nav-link item_navegacion" href="@{Encuesta.priorizacion(session.get('encuesta'))}">
+            Priorización por Módulos</a>
+            <a class="w-nav-link item_navegacion" href="@{Encuesta.resultados(session.get('encuesta'))}">
+              Resultado Final</a>
+            #{/if}
+            #{else}
+            <a class="w-nav-link item_navegacion" style="color: #AAA;" href="javascript:recomendarLlenarFormulario();">Priorización por Módulos</a>
+            <a class="w-nav-link item_navegacion" style="color: #AAA;" href="javascript:recomendarLlenarFormulario();">Resultado Final</a>
+            #{/else}
+
+
+            </nav>
+            <div class="w-nav-button">
+              <div class="w-icon-nav-menu"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-container">
+    <div>
+      <div class="w-form contenedor_form">
+		#{doLayout /}
+	  </div>	  
+	  <div class="w-form">
+		<div class="w-row" style="background-color:white;">
+			<div class="w-col w-col-3">
+				<img style="height:80px;" src="@{'/public/images/logo_ciat.jpg'}" alt="Logo CIAT" >
+			</div>
+			<div class="w-col w-col-3">
+				<img style="width:220px;margin-top:15px;" src="@{'/public/images/logo_fs.jpg'}" alt="Logo FS" >	
+			</div>
+			<div class="w-col w-col-3">
+				<img style="height:80px;margin-left:60px;" src="@{'/public/images/logo_pnuma.jpg'}" alt="Logo PNUMA" >
+			</div>
+			<div class="w-col w-col-3">
+				<img style="height:80px;" src="@{'/public/images/Meba.jpg'}" alt="Logo MEbA" >
+			</div>
+		</div>
+	  </div>
+  </div>
+  <script type="text/javascript" src="@{'/public/javascripts/jquery.min.js'}"></script>
+  <script type="text/javascript" src="@{'/public/javascripts/funciones.js'}"></script>
+  <script type="text/javascript" src="@{'/public/javascripts/webflow.js'}"></script>
+  <script type="text/javascript">
+  function recomendarLlenarFormulario () {
+    alert("Por favor ingrese los datos de entrada");
+  }
+  </script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+</body>
+</html>

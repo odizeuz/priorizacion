@@ -1,0 +1,664 @@
+#{extends 'main.html' /}
+#{set title:'Encuesta' /}
+                
+          <h5>Haga click en cada uno de los módulos para ingresar los datos. Puede minimizar el módulo haciendo click nuevamente
+           sobre su barra de título.</h5>        
+
+        #{form @Encuesta.calcular(), method:'POST', id:'form_encuesta', class:'w-clearfix', enctype:'multipart/form-data' }
+
+          <label for="idPais">País (Moneda)</label>
+          <select class="w-select" id="idPais" name="idPais" 
+          onchange="window.location.replace('/encuesta/index?idPais='+this.value+'&idEncuesta=${idEncuesta}')">            
+            #{list paises}
+              <option 
+              #{if paisSeleccionado.id == _.id }
+               selected="selected" 
+              #{/if}
+               value="${_.id}">${_.nombre} (${_.moneda})</option>
+            #{/list}
+          </select>
+
+          <div id="t1-acb-module" class="div-module-title dark-blue-block collapsed">
+              <h2 id="h2-acb-module">MÓDULO DE ÁNALISIS DE COSTO - BENEFICIO</h2>
+          </div>
+
+          <div id="block-acb-module" class="oculto">
+
+          <input type="hidden" name="idEncuesta" value="${idEncuesta}" />
+
+          <div class="linea_divisoria"></div>
+          <h4>DATOS GENERALES DEL PRODUCTOR:</h4>		  
+          <label>DNI:</label>
+          <input class="w-input" type="text" placeholder="Número de identificación del agricultor" name="dni" required="required">
+		      <label>Nombre Completo:</label>
+          <input class="w-input" type="text" placeholder="Ingrese el nombre del agricultor" name="nombre" required="required">          
+          <label>¿Realiza actividades adicionales a la agricultura?</label>
+          <div class="w-radio">
+            <input class="w-radio-input" id="select_adicionales1" type="radio" name="selector_adicionales" checked="checked"  value="Si" >
+            <label class="w-form-label" for="select_adicionales1">Sí</label>
+          </div>
+          <div class="w-radio">
+            <input class="w-radio-input" id="select_adicionales2" type="radio" name="selector_adicionales" value="No" >
+            <label class="w-form-label" for="select_adicionales2">No</label>
+          </div>
+    		  <div id="contenedor_ingresos_adicionales">
+    			  <label for="ingresos_adicionales">Ingresos mensuales por actividades adicionales:</label>
+    			  <input class="w-input" id="ingresos_adicionales" type="text" placeholder="Ingresos adicionales mensuales ${paisSeleccionado?.simbolo}" name="ingresos_adicionales">
+    		  </div>
+		      <div class="linea_divisoria"></div>
+          <h4>DATOS DEL CULTIVO:</h4>
+          <label for="tipo_cultivo">Tipo de Cultivo:</label>
+          <select class="w-select" id="tipo_cultivo" onchange="definirTipoCultivo()" name="tipo_cultivo">
+            <option value="1">Anual</option>
+            <option value="2">Ciclo Corto</option>
+          </select>
+        <div class="contenedor_selector_cultivo">
+			  <div id="contenedor_cultivo_anual">
+  				<label for="nombre_cultivo_anual">Nombre del Cultivo:</label>
+  				<select class="w-select" id="nombre_cultivo_anual" name="nombre_cultivo_anual" onchange="cambiarTitulos()">
+  				  <option value="">--</option>
+            #{list cultivosanuales}
+  				  <option value="${_.id}">${_.nombre}</option>
+  				  #{/list}
+  				</select>
+  				<label for="field-41">Rendimiento Cultivo Año 0:</label>
+  				<input class="w-input" id="field-41" type="text" placeholder="Rendimiento del cultivo, en Kg/Ha" name="rendimiento0">
+  				<label for="field-42">Precio de Venta Cultivo Año 0:</label>
+  				<input class="w-input" id="field-42" type="text" placeholder="${paisSeleccionado?.simbolo} por Kg (promedio anual)" name="precio_venta0">
+  				<label for="field-41">Rendimiento Cultivo Año 1:</label>
+  				<input class="w-input" id="field-41" type="text" placeholder="Rendimiento del cultivo, en Kg/Ha" name="rendimiento1">
+  				<label for="field-42">Precio de Venta Cultivo Año 1:</label>
+  				<input class="w-input" id="field-42" type="text" placeholder="${paisSeleccionado?.simbolo} por Kg (promedio anual)" name="precio_venta1">
+  				<label for="field-41">Rendimiento Cultivo Año 2:</label>
+  				<input class="w-input" id="field-41" type="text" placeholder="Rendimiento del cultivo, en Kg/Ha" name="rendimiento2">
+  				<label for="field-42">Precio de Venta Cultivo Año 2:</label>
+  				<input class="w-input" id="field-42" type="text" placeholder="${paisSeleccionado?.simbolo} por Kg (promedio anual)" name="precio_venta2">
+			  </div>
+			  <div id="contenedor_cultivos_semestrales" style="display:none;">
+				<label for="field-38">Nombre Cultivo Semestre 1:</label>
+				<select class="w-select" id="nombre_cultivo_semestre1" name="nombre_cultivo_semestre1" onchange="cambiarTitulos()">
+				  #{list cultivosciclocorto, as:'cultivo'}
+				  <option value="${cultivo.id}">${cultivo.nombre}</option>
+				  #{/list}
+				</select>
+				<label for="field-41">Rendimiento Cultivo Semestre 1:</label>
+				<input class="w-input" id="field-41" type="text" placeholder="Rendimiento del cultivo, en Kg/Ha" name="rendimiento_cultivo_semestre1" >
+				<label for="field-42">Precio de Venta Cultivo Semestre 1:</label>
+				<input class="w-input" id="field-42" type="text" placeholder="${paisSeleccionado?.simbolo} por Kg" name="precio_venta_cultivo_semestre1" >
+				<label for="field-39">Nombre Cultivo Semestre 2:</label>
+				<select class="w-select" id="nombre_cultivo_semestre2" name="nombre_cultivo_semestre2" onchange="cambiarTitulos()">
+				  #{list cultivosciclocorto, as:'cultivo'}
+				  <option value="${cultivo.id}">${cultivo.nombre}</option>
+				  #{/list}
+				</select>
+				<label for="field-43">Rendimiento Cultivo Semestre 2:</label>
+				<input class="w-input" id="field-43" type="text" placeholder="Rendimiento del cultivo, en Kg/Ha" name="rendimiento_cultivo_semestre2">
+				<label for="field-44">Precio de Venta Cultivo Semestre 2:</label>
+				<input class="w-input" id="field-44" type="text" placeholder="${paisSeleccionado?.simbolo} por Kg" name="precio_venta_cultivo_semestre2">
+			  </div>
+          </div>
+          <div class="linea_divisoria"></div>
+          <h4>COSTOS DE PRODUCCIÓN:</h4>
+          <div class="w-row">
+            <div class="w-col w-col-4">
+              <div>
+                <label>ACTIVIDADES</label>
+              </div>
+            </div>
+            <div class="w-col w-col-4">
+              <div>
+                <label>SUB-ACTIVIDADES</label>
+              </div>
+            </div>
+            <div class="w-col w-col-4">
+              <div class="w-row">
+                <div class="w-col w-col-6">
+                  <div>
+                    <label id="titulo_columna1"></label>
+                  </div>
+                </div>
+                <div class="w-col w-col-6 segundacolumna">
+                  <div>
+                    <label id="titulo_columna2"></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="actividad_agricultor">
+            <div class="w-row">
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <label>Preparación del terreno</label>
+              </div>
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <div>
+                  <ul class="w-list-unstyled sub_actividad">
+                    <li>
+                      <label>Cantidad de Jornales Empleados</label>
+                    </li>
+                    <li>
+                      <label>Precio pagado por Jornal</label>
+                    </li>
+                    <li>
+                      <label>Horas de máquinaria empleadas</label>
+                    </li>
+                    <li>
+                      <label>Precio pagado por Hora/Máquina</label>
+                    </li>
+                    <li>
+                      <label>Costo de los insumos</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <div class="w-row">
+                  <div class="w-col w-col-6">
+                    <div>
+                      <ul class="w-list-unstyled costos">
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo_primero campo_costo" id="field-3" type="text" placeholder="Jornales" name="a1" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="precio_jornal" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a2" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-7" type="text" placeholder="Horas" name="a3" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-6" type="text" placeholder="${paisSeleccionado?.simbolo} por " name="a4" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-4" type="text" placeholder="${paisSeleccionado?.simbolo} por " name="a5" >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="w-col w-col-6 segundacolumna">
+                    <ul class="w-list-unstyled costos">
+                      <li class="w-clearfix item_costos">
+                        <input class="w-input campo_costo_primero campo_costo" id="field-45" type="text" placeholder="Jornales" name="b1" >
+                      </li>
+                      <li class="w-clearfix item_costos">
+                        <input class="w-input campo_costo" id="jornal2" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b2" >
+                      </li>
+                      <li class="w-clearfix item_costos">
+                        <input class="w-input campo_costo" id="field-47" type="text" placeholder="Horas" name="b3" >
+                      </li>
+                      <li class="w-clearfix item_costos">
+                        <input class="w-input campo_costo" id="field-48" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b4" >
+                      </li>
+                      <li class="w-clearfix item_costos">
+                        <input class="w-input campo_costo" id="field-50" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b5" >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="actividad_agricultor">
+            <div class="w-row">
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <div class="titulo_actividad">
+                  <label>Siembra</label>
+                </div>
+              </div>
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <div>
+                  <ul class="w-list-unstyled sub_actividad">
+                    <li>
+                      <label>Cantidad de Jornales Empleados</label>
+                    </li>
+                    <li>
+                      <label>Precio pagado por Jornal</label>
+                    </li>
+                    <li>
+                      <label>Horas de máquinaria empleadas</label>
+                    </li>
+                    <li>
+                      <label>Precio pagado por Hora/Máquina</label>
+                    </li>
+                    <li>
+                      <label>Costo de los insumos</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <div>
+                  <div class="w-row">
+                    <div class="w-col w-col-6">
+                      <div>
+                        <ul class="w-list-unstyled costos">
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo_primero campo_costo" id="field-51" type="text" placeholder="Jornales" name="a6" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="jornal3" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a7" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-53" type="text" placeholder="Horas" name="a8" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-54" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a9" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-56" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a10" >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="w-col w-col-6 segundacolumna">
+                      <ul class="w-list-unstyled costos">
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo_primero campo_costo" id="field-57" type="text" placeholder="Jornales" name="b6" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="jornal4" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b7" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-59" type="text" placeholder="Horas" name="b8" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-60" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b9" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-62" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b10" >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="contenedor_mantenimiento" class="actividad_agricultor">
+            <div class="w-row">
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <label>Mantenimiento</label>
+              </div>
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <div>
+                  <ul class="w-list-unstyled sub_actividad">
+                    <li>
+                      <label>Cantidad de Jornales Empleados</label>
+                    </li>
+                    <li>
+                      <label>Precio pagado por Jornal</label>
+                    </li>
+                    <li>
+                      <label>Horas de máquinaria empleadas</label>
+                    </li>
+                    <li>
+                      <label>Precio pagado por Hora/Máquina</label>
+                    </li>
+                    <li>
+                      <label>Costo de los insumos</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <div>
+                  <div class="w-row">
+                    <div class="w-col w-col-6">
+                      <div>
+                        <ul class="w-list-unstyled costos">
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo_primero campo_costo" id="field-63" type="text" placeholder="Jornales" name="a11" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="jornal5" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a12" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-65" type="text" placeholder="Horas" name="a13" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-66" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a14" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-68" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a15" >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="w-col w-col-6 segundacolumna">
+                      <ul class="w-list-unstyled costos">
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo_primero campo_costo" id="field-69" type="text" placeholder="Jornales" name="b11" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="jornal6" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b12" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-71" type="text" placeholder="Horas" name="b13" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-72" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b14" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-74" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b15" >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+		</div>
+		<div class="actividad_agricultor">
+            <div class="w-row">
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <label>Fertilización</label>
+              </div>
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <div>
+                  <ul class="w-list-unstyled sub_actividad">
+                    <li>
+                      <label>Cantidad de Jornales Empleados</label>
+                    </li>
+                    <li>
+                      <label>Precio pagado por Jornal</label>
+                    </li>
+                    <li>
+                      <label>Horas de máquinaria empleadas</label>
+                    </li>
+                    <li>
+                      <label>Precio pagado por Hora/Máquina</label>
+                    </li>
+                    <li>
+                      <label>Costo de los insumos</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <div>
+                  <div class="w-row">
+                    <div class="w-col w-col-6">
+                      <div>
+                        <ul class="w-list-unstyled costos">
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo_primero campo_costo" id="field-109" type="text" placeholder="Jornales" name="a16" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="jornal7" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a17" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-111" type="text" placeholder="Horas" name="a18" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-112" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a19" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-113" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a20" >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="w-col w-col-6 segundacolumna">
+                      <ul class="w-list-unstyled costos">
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo_primero campo_costo" id="field-114" type="text" placeholder="Jornales" name="b16" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="jornal8" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b17" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-116" type="text" placeholder="Horas" name="b18" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-117" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b19" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-118" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b20" >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      		</div>
+      		<div class="actividad_agricultor">
+            <div class="w-row">
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <label>Control de malezas, plagas y enfermedades</label>
+              </div>
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <div>
+                  <ul class="w-list-unstyled sub_actividad">
+                    <li>
+                      <label>Cantidad de Jornales Empleados</label>
+                    </li>
+                    <li>
+                      <label>Precio pagado por Jornal</label>
+                    </li>
+                    <li>
+                      <label>Horas de máquinaria empleadas</label>
+                    </li>
+                    <li>
+                      <label>Precio pagado por Hora/Máquina</label>
+                    </li>
+                    <li>
+                      <label>Costo de los insumos</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <div>
+                  <div class="w-row">
+                    <div class="w-col w-col-6">
+                      <div>
+                        <ul class="w-list-unstyled costos">
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo_primero campo_costo" id="field-99" type="text" placeholder="Jornales" name="a21" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="jornal9" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a22" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-101" type="text" placeholder="Horas" name="a23" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-102" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a24" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-103" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a25" >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="w-col w-col-6 segundacolumna">
+                      <ul class="w-list-unstyled costos">
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo_primero campo_costo" id="field-104" type="text" placeholder="Jornales" name="b21" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="jornal10" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b22" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-106" type="text" placeholder="Horas" name="b23" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-107" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b24" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-108" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b25" >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="actividad_agricultor">
+            <div class="w-row">
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <label>Cosecha</label>
+              </div>
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <div>
+                  <ul class="w-list-unstyled sub_actividad">
+                    <li>
+                      <label>Cantidad de Jornales Empleados</label>
+                    </li>
+                    <li>
+                      <label>Precio pagado por Jornal</label>
+                    </li>
+                    <li>
+                      <label>Horas de máquinaria empleadas</label>
+                    </li>
+                    <li>
+                      <label>Precio pagado por Hora/Máquina</label>
+                    </li>
+                    <li>
+                      <label>Costo de los insumos</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <div>
+                  <div class="w-row">
+                    <div class="w-col w-col-6">
+                      <div>
+                        <ul class="w-list-unstyled costos">
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo_primero campo_costo" id="field-75" type="text" placeholder="Jornales" name="a26" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="jornal11" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a27" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-77" type="text" placeholder="Horas" name="a28" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-78" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a29" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-80" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a30" >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="w-col w-col-6 segundacolumna">
+                      <ul class="w-list-unstyled costos">
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo_primero campo_costo" id="field-81" type="text" placeholder="Jornales" name="b26" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="jornal12" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b27" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-83" type="text" placeholder="Horas" name="b28" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-84" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b29" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-86" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b30" >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="actividad_agricultor">
+            <div class="w-row">
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <label>Comercialización</label>
+              </div>
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <div>
+                  <ul class="w-list-unstyled sub_actividad">
+                    <li>
+                      <label>Número de viajes al punto de venta</label>
+                    </li>
+                    <li>
+                      <label>Costo por viaje</label>
+                    </li>
+                    <li>
+                      <label>Costo de los insumos</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                <div>
+                  <div class="w-row">
+                    <div class="w-col w-col-6">
+                      <div>
+                        <ul class="w-list-unstyled costos">
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo_primero campo_costo" id="field-87" type="text" placeholder="Viajes" name="a31" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-88" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a32" >
+                          </li>
+                          <li class="w-clearfix item_costos">
+                            <input class="w-input campo_costo" id="field-92" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a33" >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="w-col w-col-6 segundacolumna">
+                      <ul class="w-list-unstyled costos">
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo_primero campo_costo" id="field-93" type="text" placeholder="Viajes" name="b31" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-94" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b32" >
+                        </li>
+                        <li class="w-clearfix item_costos">
+                          <input class="w-input campo_costo" id="field-98" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b33" >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+            
+        <div id="t1-rc-module" class="div-module-title dark-blue-block collapsed">
+          <h2 id="h2-rc-module" >MÓDULO DE RIESGOS CLIMÁTICOS</h2>
+        </div>
+
+        <div id="block-rc-module" class="oculto">
+          <div class="linea_divisoria"></div>
+          #{rc_module /}           
+        </div>
+
+      <div id="t1-se-module" class="div-module-title dark-blue-block collapsed">
+        <h2 id="h2-se-module">MÓDULO DE SERVICIOS ECOSISTÉMICOS</h2>
+      </div>
+
+      <div id="block-se-module" class="oculto">
+        <div class="linea_divisoria"></div>
+        #{se_module /}
+  	  </div>
+
+      <div id="t1-ca-module" class="div-module-title dark-blue-block collapsed">
+        <h2 id="h2-ca-module">MÓDULO DE CAPACIDAD ADAPTATIVA (opcional)</h2>
+      </div>
+
+      <div id="block-ca-module" class="oculto">
+        <div class="linea_divisoria"></div>
+        #{ca_module /}
+      </div>
+
+      <div>
+		    <input id="boton_submit" class="w-button boton_enviar" type="submit" value="Calcular Priorización" />
+        <input class="w-input boton_enviar" id="tasa" type="text" value="3" name="tasa" required="required" style="width:70px;height:44px;" />
+		    <label class="boton_enviar" for="tasa" style="padding-top:10px;">Tasa de Interés Mensual (%):</label>
+      </div>
+
+        #{/form}
+ 

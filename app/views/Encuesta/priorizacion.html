@@ -1,0 +1,130 @@
+#{extends 'main.html' /}
+#{set title:'Priorización por Módulos' /}
+<div class="contenedor_priorizacion">
+
+	<div class="dark-blue-block">
+       <h2>Priorización por Módulos para: ${prod.nombre}</h2>
+    </div>	
+<div align="center">
+  <table>
+    <thead>
+      <tr>
+        <th>Prácticas</th>
+        <th>Análisis de Costo/Beneficio</th>
+        <th>Servicios Ecosistémicos</th>
+        <th>Riesgos</th>
+      </tr>
+    </thead>
+    <tbody>
+    #{list porPuntajeTotal }
+      <tr>
+      <td><strong>${_.medidaimplementada.nombre}</strong></td>
+      <td>${_.acb}</td>      
+      <td>${_.calificacionServiciosEcosistemicos*100} %</td>
+      <td>${_.calificacionAmenazas*100} %</td>
+      </tr>
+    #{/list}
+    </tbody>
+  </table>
+  </div>
+
+<!--
+	<div class="priorizacion">
+		<div class="titulopriorizacion">
+			<h3>Priorizaci&oacute;n ACB</h3>
+		</div>
+		<div class="medidas">
+			#{list porACB }
+			<div class="medida">
+				<div class="titulomedida">
+					<h4>${_.medidaimplementada.nombre}</h4>
+				</div>
+				<div class="puntaje">
+					<p>Puntaje del ACB: ${_.acb}</p>
+				</div>
+				
+			</div>
+			#{/list}			
+		</div>
+	</div>
+	<div class="priorizacion">
+		<div class="titulopriorizacion">
+			<h3>Priorizaci&oacute;n Amenazas</h3>
+		</div>
+		<div class="medidas">
+			#{list porAmenazas }
+			<div class="medida">
+				<div class="titulomedida">
+					<h4>${_.medidaimplementada.nombre}</h4>
+				</div>
+				<div class="puntaje">
+					<p>Puntaje: ${_.calificacionAmenazas*100} %</p>
+				</div>
+				
+			</div>
+			#{/list}			
+		</div>
+	</div>
+	<div class="priorizacion">
+		<div class="titulopriorizacion">
+			<h3>Priorizaci&oacute;n Servicios Ecosistémicos</h3>
+		</div>
+		<div class="medidas">
+			#{list porServiciosEco }
+			<div class="medida">
+				<div class="titulomedida">
+					<h4>${_.medidaimplementada.nombre}</h4>
+				</div>
+				<div class="puntaje">
+					<p>Puntaje: ${_.calificacionServiciosEcosistemicos*100} %</p>
+				</div>
+				
+			</div>
+			#{/list}			
+		</div>
+	</div>
+	-->
+
+	#{if true}
+		
+		<div class="priorizacion">
+			<div class="medidas">
+				
+				<div class="medida">
+					
+					#{if valorCA>50}
+						<div class="puntaje" style="background-color:#00B050;color:white;">
+							<p>Alta Capacidad Adaptativa (${valorCA})</p>
+						</div>
+					#{/if}
+					#{else}
+						#{if valorCA<=50}
+							#{if valorCA<20}
+								<div class="puntaje" style="background-color:#C0504D;color:white;">
+									<p>Baja Capacidad Adaptativa (${valorCA})</p>
+								</div>
+							#{/if}
+							#{else}
+								<div class="puntaje" style="background-color:#FFC000;color:white;">
+									<p>Capacidad Adaptativa Media (${valorCA})</p>
+								</div>
+							#{/else}
+						#{/if}
+					#{/else}
+				</div>
+							
+			</div>
+		</div>
+	#{/if}
+	#{else}
+		<div class="priorizacion">
+			<p style="color: #DC143C">En éste análisis no se contó con datos de capacidad adaptativa!</p>
+		</div>
+	#{/else}
+		
+	<div class="priorizacion" style="text-align:right;margin-right:50px">
+		<button id="boton" class="w-button" onclick="window.location.replace('/encuesta/index')">Atrás</button>
+		<button id="boton" class="w-button" onclick="window.location.replace('/encuesta/resultados?idEncuesta=${idEncuesta}')">Ver Resultados Totales</button>
+	</div>
+	
+</div>
