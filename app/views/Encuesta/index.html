@@ -43,7 +43,7 @@
           </div>
     		  <div id="contenedor_ingresos_adicionales">
     			  <label for="ingresos_adicionales">Ingresos mensuales por actividades adicionales:</label>
-    			  <input class="w-input" id="ingresos_adicionales" type="text" placeholder="Ingresos adicionales mensuales ${paisSeleccionado?.simbolo}" name="ingresos_adicionales">
+    			  <input class="w-input" id="ingresos_adicionales" type="text" placeholder="Ingresos adicionales mensuales ${paisSeleccionado?.moneda}" name="ingresos_adicionales">
     		  </div>
 		      <div class="linea_divisoria"></div>
           <h4>DATOS DEL CULTIVO:</h4>
@@ -64,15 +64,15 @@
   				<label for="field-41">Rendimiento Cultivo Año 0:</label>
   				<input class="w-input" id="field-41" type="text" placeholder="Rendimiento del cultivo, en Kg/Ha" name="rendimiento0">
   				<label for="field-42">Precio de Venta Cultivo Año 0:</label>
-  				<input class="w-input" id="field-42" type="text" placeholder="${paisSeleccionado?.simbolo} por Kg (promedio anual)" name="precio_venta0">
+  				<input class="w-input" id="field-42" type="text" placeholder="${paisSeleccionado?.moneda} por Kg (promedio anual)" name="precio_venta0">
   				<label for="field-41">Rendimiento Cultivo Año 1:</label>
   				<input class="w-input" id="field-41" type="text" placeholder="Rendimiento del cultivo, en Kg/Ha" name="rendimiento1">
   				<label for="field-42">Precio de Venta Cultivo Año 1:</label>
-  				<input class="w-input" id="field-42" type="text" placeholder="${paisSeleccionado?.simbolo} por Kg (promedio anual)" name="precio_venta1">
+  				<input class="w-input" id="field-42" type="text" placeholder="${paisSeleccionado?.moneda} por Kg (promedio anual)" name="precio_venta1">
   				<label for="field-41">Rendimiento Cultivo Año 2:</label>
   				<input class="w-input" id="field-41" type="text" placeholder="Rendimiento del cultivo, en Kg/Ha" name="rendimiento2">
   				<label for="field-42">Precio de Venta Cultivo Año 2:</label>
-  				<input class="w-input" id="field-42" type="text" placeholder="${paisSeleccionado?.simbolo} por Kg (promedio anual)" name="precio_venta2">
+  				<input class="w-input" id="field-42" type="text" placeholder="${paisSeleccionado?.moneda} por Kg (promedio anual)" name="precio_venta2">
 			  </div>
 			  <div id="contenedor_cultivos_semestrales" style="display:none;">
 				<label for="field-38">Nombre Cultivo Semestre 1:</label>
@@ -84,7 +84,7 @@
 				<label for="field-41">Rendimiento Cultivo Semestre 1:</label>
 				<input class="w-input" id="field-41" type="text" placeholder="Rendimiento del cultivo, en Kg/Ha" name="rendimiento_cultivo_semestre1" >
 				<label for="field-42">Precio de Venta Cultivo Semestre 1:</label>
-				<input class="w-input" id="field-42" type="text" placeholder="${paisSeleccionado?.simbolo} por Kg" name="precio_venta_cultivo_semestre1" >
+				<input class="w-input" id="field-42" type="text" placeholder="${paisSeleccionado?.moneda} por Kg" name="precio_venta_cultivo_semestre1" >
 				<label for="field-39">Nombre Cultivo Semestre 2:</label>
 				<select class="w-select" id="nombre_cultivo_semestre2" name="nombre_cultivo_semestre2" onchange="cambiarTitulos()">
 				  #{list cultivosciclocorto, as:'cultivo'}
@@ -94,7 +94,7 @@
 				<label for="field-43">Rendimiento Cultivo Semestre 2:</label>
 				<input class="w-input" id="field-43" type="text" placeholder="Rendimiento del cultivo, en Kg/Ha" name="rendimiento_cultivo_semestre2">
 				<label for="field-44">Precio de Venta Cultivo Semestre 2:</label>
-				<input class="w-input" id="field-44" type="text" placeholder="${paisSeleccionado?.simbolo} por Kg" name="precio_venta_cultivo_semestre2">
+				<input class="w-input" id="field-44" type="text" placeholder="${paisSeleccionado?.moneda} por Kg" name="precio_venta_cultivo_semestre2">
 			  </div>
           </div>
           <div class="linea_divisoria"></div>
@@ -160,16 +160,16 @@
                           <input class="w-input campo_costo_primero campo_costo" id="field-3" type="text" placeholder="Jornales" name="a1" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="precio_jornal" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a2" >
+                          <input class="w-input campo_costo" id="precio_jornal" type="text" placeholder="${paisSeleccionado?.moneda}" name="a2" >
                         </li>
                         <li class="w-clearfix item_costos">
                           <input class="w-input campo_costo" id="field-7" type="text" placeholder="Horas" name="a3" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="field-6" type="text" placeholder="${paisSeleccionado?.simbolo} por " name="a4" >
+                          <input class="w-input campo_costo" id="field-6" type="text" placeholder="${paisSeleccionado?.moneda}" name="a4" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="field-4" type="text" placeholder="${paisSeleccionado?.simbolo} por " name="a5" >
+                          <input class="w-input campo_costo" id="field-4" type="text" placeholder="${paisSeleccionado?.moneda}" name="a5" >
                         </li>
                       </ul>
                     </div>
@@ -180,16 +180,16 @@
                         <input class="w-input campo_costo_primero campo_costo" id="field-45" type="text" placeholder="Jornales" name="b1" >
                       </li>
                       <li class="w-clearfix item_costos">
-                        <input class="w-input campo_costo" id="jornal2" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b2" >
+                        <input class="w-input campo_costo" id="jornal2" type="text" placeholder="${paisSeleccionado?.moneda}" name="b2" >
                       </li>
                       <li class="w-clearfix item_costos">
                         <input class="w-input campo_costo" id="field-47" type="text" placeholder="Horas" name="b3" >
                       </li>
                       <li class="w-clearfix item_costos">
-                        <input class="w-input campo_costo" id="field-48" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b4" >
+                        <input class="w-input campo_costo" id="field-48" type="text" placeholder="${paisSeleccionado?.moneda}" name="b4" >
                       </li>
                       <li class="w-clearfix item_costos">
-                        <input class="w-input campo_costo" id="field-50" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b5" >
+                        <input class="w-input campo_costo" id="field-50" type="text" placeholder="${paisSeleccionado?.moneda}" name="b5" >
                       </li>
                     </ul>
                   </div>
@@ -235,16 +235,16 @@
                             <input class="w-input campo_costo_primero campo_costo" id="field-51" type="text" placeholder="Jornales" name="a6" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="jornal3" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a7" >
+                            <input class="w-input campo_costo" id="jornal3" type="text" placeholder="${paisSeleccionado?.moneda}" name="a7" >
                           </li>
                           <li class="w-clearfix item_costos">
                             <input class="w-input campo_costo" id="field-53" type="text" placeholder="Horas" name="a8" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="field-54" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a9" >
+                            <input class="w-input campo_costo" id="field-54" type="text" placeholder="${paisSeleccionado?.moneda}" name="a9" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="field-56" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a10" >
+                            <input class="w-input campo_costo" id="field-56" type="text" placeholder="${paisSeleccionado?.moneda}" name="a10" >
                           </li>
                         </ul>
                       </div>
@@ -255,16 +255,16 @@
                           <input class="w-input campo_costo_primero campo_costo" id="field-57" type="text" placeholder="Jornales" name="b6" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="jornal4" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b7" >
+                          <input class="w-input campo_costo" id="jornal4" type="text" placeholder="${paisSeleccionado?.moneda}" name="b7" >
                         </li>
                         <li class="w-clearfix item_costos">
                           <input class="w-input campo_costo" id="field-59" type="text" placeholder="Horas" name="b8" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="field-60" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b9" >
+                          <input class="w-input campo_costo" id="field-60" type="text" placeholder="${paisSeleccionado?.moneda}" name="b9" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="field-62" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b10" >
+                          <input class="w-input campo_costo" id="field-62" type="text" placeholder="${paisSeleccionado?.moneda}" name="b10" >
                         </li>
                       </ul>
                     </div>
@@ -309,16 +309,16 @@
                             <input class="w-input campo_costo_primero campo_costo" id="field-63" type="text" placeholder="Jornales" name="a11" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="jornal5" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a12" >
+                            <input class="w-input campo_costo" id="jornal5" type="text" placeholder="${paisSeleccionado?.moneda}" name="a12" >
                           </li>
                           <li class="w-clearfix item_costos">
                             <input class="w-input campo_costo" id="field-65" type="text" placeholder="Horas" name="a13" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="field-66" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a14" >
+                            <input class="w-input campo_costo" id="field-66" type="text" placeholder="${paisSeleccionado?.moneda}" name="a14" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="field-68" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a15" >
+                            <input class="w-input campo_costo" id="field-68" type="text" placeholder="${paisSeleccionado?.moneda}" name="a15" >
                           </li>
                         </ul>
                       </div>
@@ -329,16 +329,16 @@
                           <input class="w-input campo_costo_primero campo_costo" id="field-69" type="text" placeholder="Jornales" name="b11" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="jornal6" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b12" >
+                          <input class="w-input campo_costo" id="jornal6" type="text" placeholder="${paisSeleccionado?.moneda}" name="b12" >
                         </li>
                         <li class="w-clearfix item_costos">
                           <input class="w-input campo_costo" id="field-71" type="text" placeholder="Horas" name="b13" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="field-72" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b14" >
+                          <input class="w-input campo_costo" id="field-72" type="text" placeholder="${paisSeleccionado?.moneda}" name="b14" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="field-74" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b15" >
+                          <input class="w-input campo_costo" id="field-74" type="text" placeholder="${paisSeleccionado?.moneda}" name="b15" >
                         </li>
                       </ul>
                     </div>
@@ -383,16 +383,16 @@
                             <input class="w-input campo_costo_primero campo_costo" id="field-109" type="text" placeholder="Jornales" name="a16" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="jornal7" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a17" >
+                            <input class="w-input campo_costo" id="jornal7" type="text" placeholder="${paisSeleccionado?.moneda}" name="a17" >
                           </li>
                           <li class="w-clearfix item_costos">
                             <input class="w-input campo_costo" id="field-111" type="text" placeholder="Horas" name="a18" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="field-112" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a19" >
+                            <input class="w-input campo_costo" id="field-112" type="text" placeholder="${paisSeleccionado?.moneda}" name="a19" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="field-113" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a20" >
+                            <input class="w-input campo_costo" id="field-113" type="text" placeholder="${paisSeleccionado?.moneda}" name="a20" >
                           </li>
                         </ul>
                       </div>
@@ -403,16 +403,16 @@
                           <input class="w-input campo_costo_primero campo_costo" id="field-114" type="text" placeholder="Jornales" name="b16" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="jornal8" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b17" >
+                          <input class="w-input campo_costo" id="jornal8" type="text" placeholder="${paisSeleccionado?.moneda}" name="b17" >
                         </li>
                         <li class="w-clearfix item_costos">
                           <input class="w-input campo_costo" id="field-116" type="text" placeholder="Horas" name="b18" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="field-117" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b19" >
+                          <input class="w-input campo_costo" id="field-117" type="text" placeholder="${paisSeleccionado?.moneda}" name="b19" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="field-118" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b20" >
+                          <input class="w-input campo_costo" id="field-118" type="text" placeholder="${paisSeleccionado?.moneda}" name="b20" >
                         </li>
                       </ul>
                     </div>
@@ -457,16 +457,16 @@
                             <input class="w-input campo_costo_primero campo_costo" id="field-99" type="text" placeholder="Jornales" name="a21" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="jornal9" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a22" >
+                            <input class="w-input campo_costo" id="jornal9" type="text" placeholder="${paisSeleccionado?.moneda}" name="a22" >
                           </li>
                           <li class="w-clearfix item_costos">
                             <input class="w-input campo_costo" id="field-101" type="text" placeholder="Horas" name="a23" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="field-102" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a24" >
+                            <input class="w-input campo_costo" id="field-102" type="text" placeholder="${paisSeleccionado?.moneda}" name="a24" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="field-103" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a25" >
+                            <input class="w-input campo_costo" id="field-103" type="text" placeholder="${paisSeleccionado?.moneda}" name="a25" >
                           </li>
                         </ul>
                       </div>
@@ -477,16 +477,16 @@
                           <input class="w-input campo_costo_primero campo_costo" id="field-104" type="text" placeholder="Jornales" name="b21" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="jornal10" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b22" >
+                          <input class="w-input campo_costo" id="jornal10" type="text" placeholder="${paisSeleccionado?.moneda}" name="b22" >
                         </li>
                         <li class="w-clearfix item_costos">
                           <input class="w-input campo_costo" id="field-106" type="text" placeholder="Horas" name="b23" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="field-107" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b24" >
+                          <input class="w-input campo_costo" id="field-107" type="text" placeholder="${paisSeleccionado?.moneda}" name="b24" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="field-108" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b25" >
+                          <input class="w-input campo_costo" id="field-108" type="text" placeholder="${paisSeleccionado?.moneda}" name="b25" >
                         </li>
                       </ul>
                     </div>
@@ -531,16 +531,16 @@
                             <input class="w-input campo_costo_primero campo_costo" id="field-75" type="text" placeholder="Jornales" name="a26" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="jornal11" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a27" >
+                            <input class="w-input campo_costo" id="jornal11" type="text" placeholder="${paisSeleccionado?.moneda}" name="a27" >
                           </li>
                           <li class="w-clearfix item_costos">
                             <input class="w-input campo_costo" id="field-77" type="text" placeholder="Horas" name="a28" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="field-78" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a29" >
+                            <input class="w-input campo_costo" id="field-78" type="text" placeholder="${paisSeleccionado?.moneda}" name="a29" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="field-80" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a30" >
+                            <input class="w-input campo_costo" id="field-80" type="text" placeholder="${paisSeleccionado?.moneda}" name="a30" >
                           </li>
                         </ul>
                       </div>
@@ -551,16 +551,16 @@
                           <input class="w-input campo_costo_primero campo_costo" id="field-81" type="text" placeholder="Jornales" name="b26" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="jornal12" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b27" >
+                          <input class="w-input campo_costo" id="jornal12" type="text" placeholder="${paisSeleccionado?.moneda}" name="b27" >
                         </li>
                         <li class="w-clearfix item_costos">
                           <input class="w-input campo_costo" id="field-83" type="text" placeholder="Horas" name="b28" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="field-84" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b29" >
+                          <input class="w-input campo_costo" id="field-84" type="text" placeholder="${paisSeleccionado?.moneda}" name="b29" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="field-86" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b30" >
+                          <input class="w-input campo_costo" id="field-86" type="text" placeholder="${paisSeleccionado?.moneda}" name="b30" >
                         </li>
                       </ul>
                     </div>
@@ -599,10 +599,10 @@
                             <input class="w-input campo_costo_primero campo_costo" id="field-87" type="text" placeholder="Viajes" name="a31" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="field-88" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a32" >
+                            <input class="w-input campo_costo" id="field-88" type="text" placeholder="${paisSeleccionado?.moneda}" name="a32" >
                           </li>
                           <li class="w-clearfix item_costos">
-                            <input class="w-input campo_costo" id="field-92" type="text" placeholder="${paisSeleccionado?.simbolo}" name="a33" >
+                            <input class="w-input campo_costo" id="field-92" type="text" placeholder="${paisSeleccionado?.moneda}" name="a33" >
                           </li>
                         </ul>
                       </div>
@@ -613,10 +613,10 @@
                           <input class="w-input campo_costo_primero campo_costo" id="field-93" type="text" placeholder="Viajes" name="b31" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="field-94" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b32" >
+                          <input class="w-input campo_costo" id="field-94" type="text" placeholder="${paisSeleccionado?.moneda}" name="b32" >
                         </li>
                         <li class="w-clearfix item_costos">
-                          <input class="w-input campo_costo" id="field-98" type="text" placeholder="${paisSeleccionado?.simbolo}" name="b33" >
+                          <input class="w-input campo_costo" id="field-98" type="text" placeholder="${paisSeleccionado?.moneda}" name="b33" >
                         </li>
                       </ul>
                     </div>

@@ -46,6 +46,8 @@ public class Encuesta extends Controller {
 
 		Long idPais = params.get("idPais", Long.class);
 
+		System.out.println("Ident " + idPais);
+
 		int dni = params.get("dni", int.class);
 		String nombre = params.get("nombre");
 		int tipoCultivo = params.get("tipo_cultivo", int.class);
@@ -283,7 +285,7 @@ public class Encuesta extends Controller {
 		}
 		
 		if (nueva == null) {
-			nueva = new models.Encuesta(tasa,50.0,25.0,25.0,0.0,agri, idPais).save();
+			nueva = new models.Encuesta(tasa,50.0,25.0,25.0,0.0,agri,idPais).save();
 		}
 		 
 		nueva.calcularCandidatas();

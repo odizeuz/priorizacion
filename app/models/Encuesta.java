@@ -4,13 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.math.*;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 import play.data.validation.Required;
 import play.db.jpa.Model;
@@ -39,6 +33,7 @@ public class Encuesta extends Model {
 	@Required
 	public double calculoCapacidadAdaptativa;
 
+	@ManyToOne
 	@Required
 	public Pais paisEncuesta;
 	
@@ -66,6 +61,8 @@ public class Encuesta extends Model {
 		this.calculoCapacidadAdaptativa = calculoCapacidadAdaptativa;
 		this.productor = productor;
 		this.paisEncuesta = models.Pais.findById(idPaisEncuesta);
+
+		System.out.println("Ident " + paisEncuesta.nombre);
 		
 		this.medidasCandidatas = new ArrayList<MedidaAdaptacionImplementada>();
 	}
