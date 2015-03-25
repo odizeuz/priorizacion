@@ -1,8 +1,6 @@
 # Temporary and logs folders
 tmp
 logs
-# Databases
-play.*.db
 # Process id files
 *.pid
 # virtual machine crash logs

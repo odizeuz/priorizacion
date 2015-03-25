@@ -1,0 +1,276 @@
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(1[*], 1) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(1, 1) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(1[*], 8) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(1, 8) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(1[*], 10) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(1, 10) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(2[*], 1) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(2, 1) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(2[*], 2) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(2, 2) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(2[*], 4) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(2, 4) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(2[*], 7) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(2, 7) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(2[*], 8) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(2, 8) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(3[*], 4) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(3, 4) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(3[*], 5) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(3, 5) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(3[*], 10) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(3, 10) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(4[*], 1) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(4, 1) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(4[*], 2) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(4, 2) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(4[*], 4) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(4, 4) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(4[*], 5) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(4, 5) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(4[*], 10) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(4, 10) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(5[*], 6) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(5, 6) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(5[*], 9) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(5, 9) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(5[*], 10) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(5, 10) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(6[*], 1) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(6, 1) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(6[*], 4) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(6, 4) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(6[*], 5) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(6, 5) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(6[*], 6) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(6, 6) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(6[*], 10) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(6, 10) [42001-176]
+10-27 12:07:09 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(7[*], 1) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(7, 1) [42001-176]
+10-27 12:07:10 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(7[*], 2) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(7, 2) [42001-176]
+10-27 12:07:10 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(7[*], 6) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(7, 6) [42001-176]
+10-27 12:07:10 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(7[*], 9) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(7, 9) [42001-176]
+10-27 12:07:10 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(7[*], 10) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(7, 10) [42001-176]
+10-27 12:07:10 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(8[*], 3) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(8, 3) [42001-176]
+10-27 12:07:10 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(8[*], 10) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(8, 10) [42001-176]
+10-27 12:07:10 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(9[*], 1) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(9, 1) [42001-176]
+10-27 12:07:10 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(9[*], 2) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(9, 2) [42001-176]
+10-27 12:07:10 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(9[*], 10) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(9, 10) [42001-176]
+10-27 12:07:10 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(10[*], 1) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(10, 1) [42001-176]
+10-27 12:07:11 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(10[*], 4) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(10, 4) [42001-176]
+10-27 12:07:11 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(10[*], 8) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(10, 8) [42001-176]
+10-27 12:07:11 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEDIDAADAPTACION_AMENAZAPRODUCTIVA(10[*], 10) "; expected "identifier"; SQL statement:
+insert into medidaadaptacion_amenazaproductiva(10, 10) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(1[*], 0.2, 1, 1) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(1, 0.2, 1, 1) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(2[*], 0.3, 2, 1) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(2, 0.3, 2, 1) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(3[*], 0.17, 3, 1) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(3, 0.17, 3, 1) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(4[*], 0.25, 4, 1) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(4, 0.25, 4, 1) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(5[*], 0.15, 5, 1) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(5, 0.15, 5, 1) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(6[*], 0.3, 6, 1) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(6, 0.3, 6, 1) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(7[*], 0.22, 7, 1) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(7, 0.22, 7, 1) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(8[*], 0.13, 9, 1) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(8, 0.13, 9, 1) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(9[*], 0.363, 3, 2) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(9, 0.363, 3, 2) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(10[*], 0.2, 4, 2) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(10, 0.2, 4, 2) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(11[*], 0.26, 6, 2) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(11, 0.26, 6, 2) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(12[*], 0.32, 7, 2) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(12, 0.32, 7, 2) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(13[*], 0.21, 9, 2) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(13, 0.21, 9, 2) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(14[*], 0.21, 2, 3) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(14, 0.21, 2, 3) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(15[*], 0.38, 5, 3) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(15, 0.38, 5, 3) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(16[*], 0.37, 8, 3) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(16, 0.37, 8, 3) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(17[*], 0.44, 3, 4) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(17, 0.44, 3, 4) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(18[*], 0.26, 5, 4) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(18, 0.26, 5, 4) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(19[*], 0.36, 6, 4) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(19, 0.36, 6, 4) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(20[*], 0.25, 9, 4) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(20, 0.25, 9, 4) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(21[*], 0.38, 3, 5) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(21, 0.38, 3, 5) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(22[*], 0.1, 5, 5) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(22, 0.1, 5, 5) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(23[*], 0.4, 6, 5) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(23, 0.4, 6, 5) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(24[*], 0.3, 9, 5) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(24, 0.3, 9, 5) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(25[*], 0.4, 3, 6) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(25, 0.4, 3, 6) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(26[*], 0.42, 5, 6) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(26, 0.42, 5, 6) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(27[*], 0.12, 6, 6) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(27, 0.12, 6, 6) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(28[*], 0.5, 7, 6) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(28, 0.5, 7, 6) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(29[*], 0.18, 9, 6) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(29, 0.18, 9, 6) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(30[*], 0.4, 3, 7) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(30, 0.4, 3, 7) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(31[*], 0.45, 6, 7) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(31, 0.45, 6, 7) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(32[*], 0.25, 7, 7) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(32, 0.25, 7, 7) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(33[*], 0.44, 1, 8) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(33, 0.44, 1, 8) [42001-176]
+10-27 12:17:15 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(34[*], 0.53, 3, 8) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(34, 0.53, 3, 8) [42001-176]
+10-27 12:17:16 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(35[*], 0.36, 4, 8) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(35, 0.36, 4, 8) [42001-176]
+10-27 12:17:16 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(36[*], 0.2, 5, 8) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(36, 0.2, 5, 8) [42001-176]
+10-27 12:17:16 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(37[*], 0.48, 6, 8) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(37, 0.48, 6, 8) [42001-176]
+10-27 12:17:16 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(38[*], 0.27, 7, 8) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(38, 0.27, 7, 8) [42001-176]
+10-27 12:17:16 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(39[*], 0.25, 9, 8) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(39, 0.25, 9, 8) [42001-176]
+10-27 12:17:16 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(40[*], 0.43, 3, 8) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(40, 0.43, 3, 8) [42001-176]
+10-27 12:17:16 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(41[*], 0.49, 5, 8) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(41, 0.49, 5, 8) [42001-176]
+10-27 12:17:16 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(42[*], 0.47, 6, 8) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(42, 0.47, 6, 8) [42001-176]
+10-27 12:17:16 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(43[*], 0.32, 9, 8) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(43, 0.32, 9, 8) [42001-176]
+10-27 12:17:16 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(44[*], 0.3, 3, 10) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(44, 0.3, 3, 10) [42001-176]
+10-27 12:17:16 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(45[*], 0.23, 5, 10) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(45, 0.23, 5, 10) [42001-176]
+10-27 12:17:16 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(46[*], 0.4, 7, 10) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(46, 0.4, 7, 10) [42001-176]
+10-27 12:17:16 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO MEJORARENDIMIENTO(47[*], 0.17, 9, 10) "; expected "identifier"; SQL statement:
+insert into mejorarendimiento(47, 0.17, 9, 10) [42001-176]
+10-28 15:28:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PAISENCUESTA BINARY(255)": "X'aced00057372000b6d6f64656c732e50616973293eb1d98ea32eea0200024c00066d6f6e6564617400124c6a6176612f6c616e672f537472696e673b4c0006... (297)"; SQL statement:
+insert into Encuesta (id, calculoCapacidadAdaptativa, paisEncuesta, ponderacionACB, ponderacionAmenazas, ponderacionServiciosEcosistemicos, productor_id, tasaInteres) values (null, ?, ?, ?, ?, ?, ?, ?) [22001-176]
+10-28 15:28:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PAISENCUESTA BINARY(255)": "X'aced00057372000b6d6f64656c732e50616973293eb1d98ea32eea0200024c00066d6f6e6564617400124c6a6176612f6c616e672f537472696e673b4c0006... (297)"; SQL statement:
+insert into Encuesta (id, calculoCapacidadAdaptativa, paisEncuesta, ponderacionACB, ponderacionAmenazas, ponderacionServiciosEcosistemicos, productor_id, tasaInteres) values (null, ?, ?, ?, ?, ?, ?, ?) [22001-176]
+10-28 15:28:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PAISENCUESTA BINARY(255)": "X'aced00057372000b6d6f64656c732e50616973293eb1d98ea32eea0200024c00066d6f6e6564617400124c6a6176612f6c616e672f537472696e673b4c0006... (297)"; SQL statement:
+insert into Encuesta (id, calculoCapacidadAdaptativa, paisEncuesta, ponderacionACB, ponderacionAmenazas, ponderacionServiciosEcosistemicos, productor_id, tasaInteres) values (null, ?, ?, ?, ?, ?, ?, ?) [22001-176]
+10-30 04:47:49 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PAISENCUESTA BINARY(255)": "X'aced00057372000b6d6f64656c732e50616973e0da15741224c82d0200034c00066d6f6e6564617400124c6a6176612f6c616e672f537472696e673b4c0006... (320)"; SQL statement:
+insert into Encuesta (id, calculoCapacidadAdaptativa, paisEncuesta, ponderacionACB, ponderacionAmenazas, ponderacionServiciosEcosistemicos, productor_id, tasaInteres) values (null, ?, ?, ?, ?, ?, ?, ?) [22001-176]
+10-31 10:15:49 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PAISENCUESTA BINARY(255)": "X'aced00057372000b6d6f64656c732e50616973e0da15741224c82d0200034c00066d6f6e6564617400124c6a6176612f6c616e672f537472696e673b4c0006... (321)"; SQL statement:
+insert into Encuesta (id, calculoCapacidadAdaptativa, paisEncuesta, ponderacionACB, ponderacionAmenazas, ponderacionServiciosEcosistemicos, productor_id, tasaInteres) values (null, ?, ?, ?, ?, ?, ?, ?) [22001-176]
+10-31 16:50:45 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PAISENCUESTA BINARY(255)": "X'aced00057372000b6d6f64656c732e50616973e0da15741224c82d0200034c00066d6f6e6564617400124c6a6176612f6c616e672f537472696e673b4c0006... (321)"; SQL statement:
+insert into Encuesta (id, calculoCapacidadAdaptativa, paisEncuesta, ponderacionACB, ponderacionAmenazas, ponderacionServiciosEcosistemicos, productor_id, tasaInteres) values (null, ?, ?, ?, ?, ?, ?, ?) [22001-176]
+10-31 16:54:12 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PAISENCUESTA BINARY(255)": "X'aced00057372000b6d6f64656c732e50616973e0da15741224c82d0200034c00066d6f6e6564617400124c6a6176612f6c616e672f537472696e673b4c0006... (321)"; SQL statement:
+insert into Encuesta (id, calculoCapacidadAdaptativa, paisEncuesta, ponderacionACB, ponderacionAmenazas, ponderacionServiciosEcosistemicos, productor_id, tasaInteres) values (null, ?, ?, ?, ?, ?, ?, ?) [22001-176]
